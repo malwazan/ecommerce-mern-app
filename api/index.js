@@ -18,6 +18,14 @@ mongoose.connect(process.env.MONGO_URL)
     });
 
 
+app.get("/", async (req, res) => {
+    return res.status(200).send("(-_-) I am healthy container ");
+});
+
+app.get("/health-check", async (req, res) => {
+    return res.status(200).send("(/health-check ._.) I am healthy container");
+});
+
 // import routers
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");

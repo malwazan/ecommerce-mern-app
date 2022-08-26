@@ -1,0 +1,17 @@
+
+services:
+
+  # service name
+  mernapi:
+    
+    # build is in the current directory
+    build: .
+
+    # command to run the app
+    command: npm start
+
+    # Maps port 5000 inside docker container to port 5000 outside docker container
+    ports:
+      - "5000:5000"
+    
+  

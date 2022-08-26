@@ -1,8 +1,8 @@
 FROM node:16.15-alpine3.14
 
-RUN mkdir -p /opt/app
+RUN mkdir -p /usr/src/app
 
-WORKDIR /opt/app
+WORKDIR /usr/src/app
 
 COPY api/ .
 
